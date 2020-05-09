@@ -49,7 +49,7 @@ while True:
     response = val
     print(val)
     if val != "Not Parsable" and val != "Division By 0":
-        response = "$ " + str('{:f}'.format(exec_time)) + " $ " + str(val) + " $"
+        response = "$ {time:f} $ {retVal} $".format(time = exec_time, retVal = str(val))
     conn.send(bytes(response, "utf-8"))
 
 conn.close()
